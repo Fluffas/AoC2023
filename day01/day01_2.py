@@ -1,5 +1,6 @@
 import sys
 
+
 def find_digit(line, sequence):
     for i in sequence:
         if line[i].isdigit():
@@ -8,6 +9,7 @@ def find_digit(line, sequence):
             for word, num in spelled_out.items():
                 if line[i:].startswith(word):
                     return spelled_out[word]
+
 
 with open(sys.argv[1]) as f:
     data = f.read().splitlines()
